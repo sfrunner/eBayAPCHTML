@@ -13,21 +13,22 @@
 			body{font-family: Arial, Helvetica, sans-serif;}
 			#header-background {background: url(http://imagecache2.allposters.com/images/jump_pages/20100809_ebay/hdr_bg.gif) top right repeat-x; height:46px; border-radius: 0px 8px 0px 0px }
 			#image{max-width:100%; height:auto;}
-			nav{ background-color: #222;}
-			#search-box{margin-left:-10%;}
-			#searchbutton{border-radius: 5px 5px 5px 5px;}
-			.nav-link{border-right:thin silver solid; padding-bottom: 1.25%; width:15%; float:left; }
+			.navbar-form{ background-color: #222; margin:0% -15px 0% -15px; padding: 0% 0% 0% 0%;}
+			#searchbutton{border-radius: 5px 5px 5px 5px; background: #c82020;  color:white; font-size:medium;}
+			.nav-link{border-right:thin silver solid; padding-bottom: 1.25%; width:15%; }
 			#contactus-nav{border-right:none}
 			h4{ text-align:center; color:white; padding-top:3% ; margin-bottom:0px; }
 			h2{text-align:left;color: #ab2626;}
-			#details-section{margin-top:1%;}
 			#details-box{ background: url(http://imagecache2.allposters.com/images/jump_pages/20100803_ebay/item_bg_v2.jpg) top left repeat-x;border :medium silver solid; padding-top:0%;}
 			#image-box{margin-top:2%}
 			#main-details-box{margin-top:2%;}
 			#faqs-box{border-top: thin silver solid;}
 			.input-group-btn{width:100%;}
 			@media (max-width: 1000px){
-			.form-group{width:100%} #searchvalue{width:100%;}.nav-link{border-bottom:thin silver solid; margin-top:-2%;padding-bottom: 2%; width:100%; border-right:none;} #shipping-header{clear: both; margin-top:-1%;} #image-box{border-right: none;}
+			#searchbutton{}.nav-link{border-bottom:thin silver solid; margin-top:-2%;padding-bottom: 2%; width:100%; border-right:none;} #shipping-header{clear: both; margin-top:-1%;} #image-box{border-right: none;}
+			}
+			@media (max-width: 768px){
+			#searchbutton{width: 100%}	
 			}
 		</style>
 	</head>
@@ -38,28 +39,24 @@
 					<img class="img-fluid" id="image" src="http://imagecache2.allposters.com/images/jump_pages/20100809_ebay/apc_logo_slogan.gif" alt="AllPosters.com - The World's Largest Print &amp; Poster Store">	
 				</div>
 			</header>
-			<nav class="row">
-				<div class="span4" id="search-box-column">
-					<form class="navbar-form navbar-left" role="search" action="http://stores.ebay.com/allposters/_i.html" method="get" name="Search" target="_blank">
-  						<div class="form-group">
-    						<input name="_nkw" id="searchvalue" type="text" class="form-control" placeholder="Search">
-  						</div>
-  						<span class="input-group-btn">
-  							<button id="searchbutton" type="submit" class="btn btn-md btn-danger active" alt="Search"  value="Search">Search</button>
-  							<input value="12" name="_sop" type="hidden">
-  						</span>
+			<nav class="row navbar-form" id="nav">
+				<div class="col-md-4" id="search-box-column">
+					<form class="form- group" role="search" action="http://stores.ebay.com/allposters/_i.html" method="get" name="Search" target="_blank">
+  						<input name="_nkw" id="searchvalue" type="text" class="form-control" placeholder="Search">
+  						<button id="searchbutton" type="submit" class="btn btn-defaudlt navbar-btn" alt="Search"  value="Search">Search</button>
+  						<input value="12" name="_sop" type="hidden">
    					</form>		   						
 				</div>
-				<div class="span2 nav-link">
+				<div class="col-md-2 nav-link">
 					<a id="shipping-link" href="#shipping-box"><h4 id="shipping-header">Shipping</h4></a>
 				</div>
-				<div class="span2 nav-link">
+				<div class="col-md-2 nav-link">
 					<a href="#payments-box"><h4 id="payments-header">Payments</h4></a>
 				</div>
-				<div class="span2 nav-link">
+				<div class="col-md-2 nav-link">
 					<a href="#returns-box"><h4 id="returns-header">Returns</h4></a>
 				</div>
-				<div class="span2 nav-link" id="contactus-nav">
+				<div class="col-md-2 nav-link" id="contactus-nav">
 					<a href="#contactus-box"><h4 id="contactus-header">Contact Us</h4></a>
 				</div>
 			</nav>
